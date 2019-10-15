@@ -1,0 +1,48 @@
+Q.Display complete user information or all users of your Tesla Website
+they need not have purchased a car, they should just be registered
+users (name / address etc.) 
+
+
+Used This Query to set who have purchased cars and updated in users table
+UPDATE users AS u
+INNER JOIN order_details AS o
+ON u.user_id=o.user_id
+SET u.purchase_history='yes'
+WHERE u.user_id=o.user_id
+
+
+
+Used Following Query to find users who are registerd but have not purchased
+
+127.0.0.1/tesla/users/		http://localhost/phpmyadmin/sql.php?server=1&db=tesla&table=order_details&pos=0
+ Showing rows 0 - 24 (66 total, Query took 0.0039 seconds.)
+
+SELECT user_id, name, last_name, phone_no, e_mail, purchase_history FROM users WHERE purchase_history='No'
+
+
+user_id	name	last_name	phone_no	e_mail						purchase_history	
+2	Joseph	Miller		2932377185	metus.eu@erat.co.uk				No	
+3	Alex	Brown		6772567069	egestas.rhoncus.Proin@fringilla.ca		No	
+5	Jackson	Miller		5073248118	feugiat@eratnequenon.co.uk			No	
+6	Jackson	Williams	4386760416	volutpat.Nulla@temporbibendumDonec.co.uk	No	
+8	David	Williams	9517415833	a@tinciduntpede.com				No	
+9	Jackson	Smith		1788738069	non.lacinia@dictum.net				No	
+11	Alex	Smith		7966287146	dolor.Donec@elitfermentum.edu			No	
+12	Alex			9940756102	lorem.vitae@euplacerat.com			No	
+14	David	Brown		7211070330	Mauris.eu.turpis@mauriseu.co.uk			No	
+15	Jackson	Smith		3286728775	nulla@iderat.edu				No	
+17	Garry	Brown		0634605054	ante.ipsum@etlibero.ca				No	
+18	Jackson	Williams	9101332728	ligula.Nullam@venenatisvel.com			No	
+20	Joseph	Williams	4416796792	felis.ullamcorper@elitpretium.org		No	
+21	Emma	Williams	7940848853	non.magna.Nam@ipsumprimis.org			No	
+23	David	Smith		5434478968	amet@lectus.org					No	
+24	Alex	Johnson		5971889154	ac@Quisqueporttitor.edu				No	
+26	Joseph	Smith		2093374622	sit.amet@id.org					No	
+27	Emma	Brown		4779136450	nisl.arcu@sapienCrasdolor.co.uk			No	
+29	Sophia	Smith		1190890991	iaculis.enim@acipsum.ca				No	
+30	Joseph	Smith		6072822651	rutrum@nuncullamcorper.edu			No	
+32	David	Brown		7422323501	porttitor.vulputate@mollisduiin.edu		No	
+33	Jackson	Smith		6164324083	Sed@gravidamolestie.org				No	
+35	Garry	Brown		7475712843	tristique.ac.eleifend@adipiscing.ca		No	
+36	David	Brown		2795079820	Morbi.sit@Duisvolutpatnunc.net			No	
+38	Alex	Smith		1177944506	non.dapibus.rutrum@enim.org			No	

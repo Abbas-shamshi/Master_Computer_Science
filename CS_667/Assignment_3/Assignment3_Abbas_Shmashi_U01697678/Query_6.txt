@@ -1,0 +1,35 @@
+Q.List all the users who have deleted/deactivated their account.
+
+
+127.0.0.1/tesla/users/		http://localhost/phpmyadmin/tbl_sql.php?db=tesla&table=users
+ Showing rows 0 - 24 (35 total, Query took 0.0240 seconds.)
+
+SELECT user_id,name,last_name,phone_no,e_mail,purchase_history FROM `users` WHERE account_status='Deleted' OR account_status='Deactivated'
+
+
+user_id	name	last_name	phone_no	e_mail					account_status	purchase_history	
+3	Alex	Brown		6772567069	egestas.rhoncus.Proin@fringilla.ca	Deactivated	No	
+4	Sophia	Johnson		8416666610	porttitor.vulputate@sedturpis.ca	Deleted		Yes	
+13	Jackson	Miller		3503221231	magna@pede.edu				Deleted		Yes	
+14	David	Brown		7211070330	Mauris.eu.turpis@mauriseu.co.uk		Deactivated	Yes	
+19	Garry	Miller		4158996660	molestie.tellus@sit.edu			Deleted		No	
+22	David	Johnson		1216737482	porttitor.tellus.non@Sedcongue.com	Deactivated	No	
+23	David	Smith		5434478968	amet@lectus.org				Deleted		No	
+31	Garry	Miller		5868886263	netus@et.net				Deactivated	Yes	
+36	David	Brown		2795079820	Morbi.sit@Duisvolutpatnunc.net		Deactivated	No	
+39	Sophia	Miller		8725901598	sollicitudin.a@diameu.net		Deleted		Yes	
+42	Alex	Brown		1812276253	sem.magna@aneque.ca			Deactivated	No	
+52	Jackson	Johnson		4103836009	Mauris.blandit@parturientmontes.net	Deactivated	No	
+58	Jackson	Miller		9772913745	eleifend@vitae.edu			Deleted		No	
+59	Sophia	Williams	7170256158	blandit.congue.In@erat.org		Deleted		Yes	
+60	Joseph	Smith		5157047781	sagittis.Nullam@eu.com			Deleted		Yes	
+63	Sophia	Smith		2465793359	purus.ac@pharetraut.edu			Deactivated	Yes	
+65	Jackson	Smith		5318281513	dis.parturient@Integertincidunt.co.uk	Deactivated	No	
+69	Joseph	Smith		0297808801	Nunc.commodo@bibendumsedest.co.uk	Deactivated	Yes	
+70	Alex	Smith		4923463835	nisl.arcu.iaculis@ettristique.com	Deactivated	No	
+71	Emma	Williams	7377976587	lorem.ipsum@maurissapiencursus.ca	Deactivated	Yes	
+73	Emma	Williams	6739968572	senectus.et.netus@atpedeCras.ca		Deleted		Yes	
+77	Emma	Brown		0470944365	risus.In.mi@Phasellus.ca		Deleted		Yes	
+78	Garry	Williams	1699701577	orci.adipiscing.non@scelerisque.co.uk	Deleted		Yes	
+79	David	Williams	5037351048	dictum.eu.placerat@dui.com		Deactivated	Yes	
+80	Sophia	Johnson		1469200225	a.neque@luctusvulputatenisi.com		Deactivated	No	

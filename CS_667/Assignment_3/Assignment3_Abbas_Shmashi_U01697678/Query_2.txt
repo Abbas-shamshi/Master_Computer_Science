@@ -1,0 +1,14 @@
+Q.Display a list of people who bought the Tesla Model 3, Standard
+version
+
+
+127.0.0.1/tesla/users/		http://localhost/phpmyadmin/tbl_sql.php?db=tesla&table=orders
+ Showing rows 0 -  2 (3 total, Query took 0.0078 seconds.)
+
+SELECT users.user_id, users.name, users.last_name, cars.model, cars.version FROM ((users INNER JOIN order_details ON users.user_id=order_details.user_id) INNER JOIN cars ON order_details.car_id=cars.car_id) WHERE cars.model='model 3' AND cars.version='standard'
+
+
+user_id	name	last_name	model	version	
+5	Jackson	Miller		model 3	Standard	
+15	Jackson	Smith		model 3	Standard	
+30	Joseph	Smith		model 3	Standard	

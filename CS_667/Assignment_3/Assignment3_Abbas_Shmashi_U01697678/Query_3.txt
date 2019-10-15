@@ -1,0 +1,11 @@
+Q.List the total number of registered users
+
+
+127.0.0.1/tesla/users/		http://localhost/phpmyadmin/tbl_sql.php?db=tesla&table=orders
+Your SQL query has been executed successfully.
+
+SELECT COUNT(user_id) AS Total_Registered_Users FROM users
+
+
+Total_Registered_Users
+100	

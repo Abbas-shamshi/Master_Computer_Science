@@ -1,0 +1,42 @@
+Q.Display quarterly sales for the year 2019
+
+1.Query 
+
+127.0.0.1/tesla/orders/		http://localhost/phpmyadmin/tbl_sql.php?db=tesla&table=orders
+ Showing rows 0 - 10 (11 total, Query took 0.0039 seconds.)
+
+SELECT * FROM order_details WHERE purchased_date BETWEEN '01/01/19' AND '04/01/19'
+
+
+id	order_id	user_id	car_id	purchased_date	returned_date	amount_paid	status	
+3	7515383467	3	3	02/08/19	NULL		32000		Purchased	
+8	1366644099	8	8	01/20/19	01/26/19	92000		Returned	
+20	5795076806	20	20	03/13/19	NULL		49000		Purchased	
+23	9892322048	23	23	01/01/19	NULL		56000		Purchased	
+25	7940399225	25	25	01/16/19	NULL		32000		Purchased	
+28	3814952417	28	28	02/14/19	NULL		72000		Purchased	
+29	1231742199	29	29	03/06/19	03/08/19	72000		Returned	
+30	8687957104	30	30	03/17/19	NULL		49000		Purchased	
+31	9405123403	31	31	03/03/19	03/07/19	41000		Returned	
+32	4919485554	32	32	02/07/19	NULL		41000		Purchased	
+33	6812295183	33	33	03/17/19	NULL		56000		Purchased	
+
+
+
+2.QUERY ONLY FOR PURCHASED CAR
+
+127.0.0.1/tesla/orders/		http://localhost/phpmyadmin/tbl_sql.php?db=tesla&table=orders
+ Showing rows 0 -  7 (8 total, Query took 0.0172 seconds.)
+
+SELECT * FROM order_details WHERE purchased_date BETWEEN '01/01/19' AND '04/01/19' AND status='Purchased'
+
+
+id	order_id	user_id	car_id	purchased_date	returned_date	amount_paid	status	
+3	7515383467	3	3	02/08/19	NULL		32000		Purchased	
+20	5795076806	20	20	03/13/19	NULL		49000		Purchased	
+23	9892322048	23	23	01/01/19	NULL		56000		Purchased	
+25	7940399225	25	25	01/16/19	NULL		32000		Purchased	
+28	3814952417	28	28	02/14/19	NULL		72000		Purchased	
+30	8687957104	30	30	03/17/19	NULL		49000		Purchased	
+32	4919485554	32	32	02/07/19	NULL		41000		Purchased	
+33	6812295183	33	33	03/17/19	NULL		56000		Purchased	

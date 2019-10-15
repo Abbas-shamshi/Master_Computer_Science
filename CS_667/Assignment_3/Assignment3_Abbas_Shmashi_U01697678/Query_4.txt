@@ -1,0 +1,14 @@
+Q.Display list of returned cars (7 day return policy). {purchase date
+should not be more than 7 days}
+
+127.0.0.1/tesla/orders/		http://localhost/phpmyadmin/tbl_sql.php?db=tesla&table=orders
+ Showing rows 0 -  3 (4 total, Query took 0.0066 seconds.)
+
+SELECT order_details.order_id, order_details.car_id, order_details.purchased_date, order_details.returned_date, order_details.status, cars.model, cars.version FROM order_details INNER JOIN cars ON order_details.car_id=cars.car_id WHERE order_details.status='Returned'
+
+
+order_id	car_id	purchased_date	returned_date	status		model		version	
+9149968986	7	12/28/18	01/02/19	Returned	model y		Standard	
+1366644099	8	01/20/19	01/26/19	Returned	model y		Standard	
+1231742199	29	03/06/19	03/08/19	Returned	model x		Sporty	
+9405123403	31	03/03/19	03/07/19	Returned	model y		Sporty	

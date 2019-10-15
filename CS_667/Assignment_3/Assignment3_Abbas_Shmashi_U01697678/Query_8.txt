@@ -1,0 +1,29 @@
+Q.Funny thing; Tesla employees can purchase teslas` right? Find a list of
+all the users who are employees and they have purchased the cars, list
+the models they own as well. 
+
+127.0.0.1/tesla/users/		http://localhost/phpmyadmin/tbl_sql.php?db=tesla&table=users
+ Showing rows 0 - 13 (14 total, Query took 0.0090 seconds.)
+
+SELECT users.user_id, users.name, users.last_name,users.purchase_history,users.emplyee, cars.model,cars.version, cars.year,users.e_mail
+FROM ((users
+INNER JOIN order_details ON users.user_id=order_details.user_id)
+      INNER JOIN cars ON order_details.car_id=cars.car_id)
+WHERE users.emplyee='yes'
+
+
+user_id	name	last_name	purchase_history	emplyee	model		version		year	e_mail	
+10	Emma	Johnson		yes			Yes	model y		Standard	2016	magna.Nam@vellectus.edu	
+13	Jackson	Miller		yes			Yes	model s		Sporty		2016	magna@pede.edu	
+16	Joseph	Smith		yes			Yes	model s		Standard	2018	egestas.rhoncus.Proin@neque.org	
+19	Garry	Miller		yes			Yes	model 3		Sporty		2019	molestie.tellus@sit.edu	
+28	Garry	Williams	yes			Yes	model y		Standard	2015	ipsum.dolor@vehiculaPellentesque.co.uk	
+37	Garry	Miller		yes			Yes	model x		Long range	2015	semper.auctor@ridiculus.ca	
+43	Sophia	Brown		yes			Yes	model x		Sporty		2016	In.at@aaliquetvel.com	
+46	Joseph	Brown		yes			Yes	model y		Sporty		2015	ut.eros.non@inceptoshymenaeosMauris.ca	
+55	Joseph	Smith		yes			Yes	model y		Long range	2017	mauris.Morbi.non@urna.org	
+58	Jackson	Miller		yes			Yes	model y		Standard	2017	eleifend@vitae.edu	
+82	Garry	Williams	yes			Yes	model 3		Standard	2016	tincidunt.nunc@Morbivehicula.net	
+88	Emma	Johnson		yes			Yes	model x		Standard	2015	euismod@Aliquamgravidamauris.co.uk	
+91	Jackson	Williams	yes			Yes	model x		Long range	2017	Sed.eu.nibh@velit.edu	
+94	Garry	Johnson		yes			Yes	model y		Standard	2019	hendrerit.Donec@anteMaecenas.edu	

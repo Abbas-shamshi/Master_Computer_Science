@@ -1,0 +1,70 @@
+Q.Display information of all the Tesla cars (different models)
+manufactured between 2018 and 2019.
+
+
+127.0.0.1/tesla/cars/		http://localhost/phpmyadmin/tbl_sql.php?db=tesla&table=cars
+ Showing rows 0 - 24 (42 total, Query took 0.0039 seconds.)
+
+SELECT * FROM `cars` WHERE year BETWEEN "2018" AND "2019"
+
+
+id	car_id	model	year	cargo	range	version	
+3	3	model x	2019	4	370	Sporty	
+4	4	model y	2018	4	325	Standard	
+8	8	model y	2018	6	325	Standard	
+11	11	model s	2018	6	370	Standard	
+12	12	model y	2019	6	325	Sporty	
+13	13	model 3	2019	4	370	Sporty	
+14	14	model x	2018	4	325	Standard	
+16	16	model 3	2018	6	300	Long range	
+17	17	model s	2019	6	310	Long range	
+21	21	model y	2019	6	370	Sporty	
+26	26	model y	2019	6	310	Long range	
+30	30	model 3	2018	4	325	Standard	
+33	33	model x	2019	6	310	Long range	
+35	35	model 3	2018	6	300	Standard	
+38	38	model s	2018	6	370	Long range	
+43	43	model y	2019	4	310	Sporty	
+45	45	model s	2018	6	370	Long range	
+50	50	model 3	2019	6	370	Long range	
+54	54	model 3	2018	6	325	Sporty	
+57	57	model 3	2018	4	310	Standard	
+58	58	model s	2018	4	325	Sporty	
+60	60	model y	2019	4	370	Sporty	
+63	63	model y	2019	4	325	Standard	
+65	65	model y	2019	6	300	Long range	
+67	67	model x	2018	6	310	Long range	
+
+127.0.0.1/tesla/cars/		http://localhost/phpmyadmin/sql.php?server=1&db=tesla&table=orders&pos=0
+ Showing rows 0 - 24 (42 total, Query took 0.0033 seconds.)
+
+SELECT * FROM `cars` WHERE year ='2018'or year='2019'
+
+
+id	car_id	model	year	cargo	range	version	
+3	3	model x	2019	4	370	Sporty	
+4	4	model y	2018	4	325	Standard	
+8	8	model y	2018	6	325	Standard	
+11	11	model s	2018	6	370	Standard	
+12	12	model y	2019	6	325	Sporty	
+13	13	model 3	2019	4	370	Sporty	
+14	14	model x	2018	4	325	Standard	
+16	16	model 3	2018	6	300	Long range	
+17	17	model s	2019	6	310	Long range	
+21	21	model y	2019	6	370	Sporty	
+26	26	model y	2019	6	310	Long range	
+30	30	model 3	2018	4	325	Standard	
+33	33	model x	2019	6	310	Long range	
+35	35	model 3	2018	6	300	Standard	
+38	38	model s	2018	6	370	Long range	
+43	43	model y	2019	4	310	Sporty	
+45	45	model s	2018	6	370	Long range	
+50	50	model 3	2019	6	370	Long range	
+54	54	model 3	2018	6	325	Sporty	
+57	57	model 3	2018	4	310	Standard	
+58	58	model s	2018	4	325	Sporty	
+60	60	model y	2019	4	370	Sporty	
+63	63	model y	2019	4	325	Standard	
+65	65	model y	2019	6	300	Long range	
+67	67	model x	2018	6	310	Long range	
+

@@ -1,0 +1,101 @@
+body {
+    background-image: url("bck.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Chilanka', cursive;
+    text-align: center;
+    color: rgb(165, 26, 26)
+}
+
+h2 {
+    font-family: 'Indie Flower', cursive;
+    font-size: 30px;
+    color: cadetblue;
+}
+
+p {
+    font-family: 'Lobster', cursive;
+    font-size: 23px;
+    color: #c2b9b9;
+}
+
+input {
+    margin: 5px 0;
+}
+
+.block1 {
+    position: relative;
+    width: 70%;
+    background-color: #f3f3f3;
+    opacity: 1;
+    /* left: 5%; */
+    padding: 1% 2%;
+    margin-top: 1%;
+    margin: 0 auto;
+}
+
+.mar {
+    margin-top: 6px;
+}
+
+.title {
+    margin: 6px 0;
+    font-weight: bold;
+    color: rgb(165, 26, 26)
+}
+
+.submit {
+    text-align: center;
+}
+
+.right-align {
+    float: right;
+}
+
+.table {
+    width: 100%;
+    background-color: #3b3434;
+    margin-top: 40px;
+}
+
+th {
+    width: 50%;
+    text-align: center;
+    color: #cf4d4d;
+    font-size: 16px;
+}
+
+td {
+    color: #f3f3f3;
+}
+
+table,
+th,
+td {
+    border: 1px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+}
+
+.bio {
+    margin-left: 60px;
+    display: flex;
+}
+
+.pic img {
+    width: 300px;
+    border-radius: 50%;
+}
+
+.text {
+    margin-left: 40px;
+}
+
+.profile {
+    font-family: 'Lobster', cursive;
+    font-size: 26px;
+    color: #c2b9b9;
+}
