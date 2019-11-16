@@ -1,0 +1,21 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT reminder (to,from,title,body)>
+<!ATTLIST reminder
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT to (#PCDATA)>
+<!ATTLIST to
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT from (#PCDATA)>
+<!ATTLIST from
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT title (#PCDATA)>
+<!ATTLIST title
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT body (#PCDATA)>
+<!ATTLIST body
+  xmlns CDATA #FIXED ''>
