@@ -1,0 +1,115 @@
+body {
+    margin: 0;
+}
+
+h1, h2, p, ul, li {
+    font-family: sans-serif;
+}
+
+.react-logo {
+    width: 400px;
+}
+
+.card {
+    padding: 15px;
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+/* On mouse-over, add a deeper shadow */
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+header img {
+    width: 100%;
+    height: 340px;
+}
+
+h1 a {
+    text-decoration: none;
+}
+
+ul.header li {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+}
+
+ul.header {
+    background-color: #111;
+    padding: 0;
+}
+
+ul.header li a {
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 20px;
+    display: inline-block;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-left {
+    width: 1000px;
+    border-radius: 20px;
+    /* background-color: #b5c7d1; */
+    padding: 20px;
+}
+
+.flex-right {
+    padding: 30px 50px;
+}
+
+footer {
+    background-color: #54636c;
+    text-align: center;
+    padding: 1px;
+}
+
+.nav-link {
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    color: inherit;
+    background-color: inherit;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    border-radius: 20px;
+    margin: 10px 0;
+}
+
+.nav-link:hover, .bck-color-white {
+    color: #000!important;
+    background-color: #fff!important
+}
+
+.nav-block {
+    display: block;
+    width: 100%
+}
+
+.nav-color {
+    color: #fff !important;
+    background-color: #7d97a5 !important
+}
+
+.nav-align {
+    width: auto;
+}
