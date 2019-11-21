@@ -1,5 +1,11 @@
 import React, { Component } from "react";
+import { Route, Switch } from "react-router";
 
+import {
+    NavLink,
+    HashRouter
+
+} from "react-router-dom";
 class Nav extends Component {
     constructor(props) {
         super(props);
@@ -23,8 +29,7 @@ class Nav extends Component {
 
             <div className="flex-right">
                 <ul>
-                    <li><a className="nav-link nav-block nav-color nav-align" href="main.js"> Google</a></li>
-
+                <li><HashRouter><NavLink to="/" className="nav-link nav-block nav-color nav-align">Home</NavLink></HashRouter></li>
                 </ul>
                 <div className="News"><h3>News</h3>
 

@@ -4,7 +4,7 @@ import r_logo from "./media/logo.svg"
 class B_node extends Component {
   render() {
     return (
-      <div>
+      <div className="card">
         <h1>Node Js</h1>
         <img src={r_logo} className="react-logo" alt="react_logo" />
 

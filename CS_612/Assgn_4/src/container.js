@@ -1,0 +1,40 @@
+import React, { Component } from "react";
+import { Route, Switch } from "react-router";
+
+import r_logo from "./media/logo.svg"
+
+import {
+    NavLink,
+    HashRouter
+} from "react-router-dom";
+
+class Container extends Component {
+    render() {
+        return (
+           <div>
+               <div className="card">
+                        <h1><NavLink to="/react">React Js</NavLink></h1>
+                        <img src={r_logo} className="react-logo" alt="react_logo" />
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fuga, velit nobis explicabo ratione quia. Dolorum, exercitationem soluta? Quod fugit maxime eveniet suscipit iure, repellendus nobis ab quidem quasi non?</p>
+                        <div>Date: 11/15/2019</div>
+                    </div>
+                    <div className="card">
+                        <h1><NavLink to="/angular">Angular Js</NavLink></h1>
+                        <img src={r_logo} className="react-logo" alt="react_logo" />
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fuga, velit nobis explicabo ratione quia. Dolorum, exercitationem soluta? Quod fugit maxime eveniet suscipit iure, repellendus nobis ab quidem quasi non?</p>
+                        <div>Date: 11/15/2019</div>
+                    </div>
+                    <div className="card">
+                        <h1><NavLink to="/node">Node Js</NavLink></h1>
+                        <img src={r_logo} className="react-logo" alt="react_logo" />
+
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure fuga, velit nobis explicabo ratione quia. Dolorum, exercitationem soluta? Quod fugit maxime eveniet suscipit iure, repellendus nobis ab quidem quasi non?</p>
+                        <div>Date: 11/15/2019</div>
+                    </div>
+           </div>
+        );
+    }
+}
+
+export default Container;
