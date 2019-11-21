@@ -28,6 +28,30 @@ header img {
     width: 100%;
     height: 340px;
 }
+.News {
+    background-color: #425159;
+    border-radius: 10px;
+}
+
+.News h3, h5 {
+    text-align: center;
+}
+
+.News h5 {
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.news_t {
+    width: 300px;
+    padding: 6px;
+}
+
+.news_t:nth-child(odd) {
+    
+    background-color: #7d97a5;
+}
+
 
 h1 a {
     text-decoration: none;
