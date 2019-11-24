@@ -1,37 +1,39 @@
 import React, { Component } from "react";
-import { Route, Switch } from "react-router";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faNewspaper } from '@fortawesome/free-solid-svg-icons';
+import { NavLink, HashRouter } from "react-router-dom";
 
-import {
-    NavLink,
-    HashRouter
-
-} from "react-router-dom";
 class Nav extends Component {
+
     constructor(props) {
         super(props);
         this.state = {
             data: null,
         };
+        // Insert YOUR API KEY HERE 
+        this.apikey = ''
     }
-    componentDidMount() {
-        fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=a7208873a9dd4d9aa4372066f2d6da4a&pageSize=10')
+    async componentDidMount() {
+        this.timer = setInterval(() => this.apicall(), 5000)
+
+
+    }
+    async apicall() {
+        fetch('https://newsapi.org/v2/top-headlines?country=us&apiKey=' + this.apikey + '&pageSize=10')
             .then(response => response.json())
-            .then(data => this.setState({ data }));
+            .then(data => this.setState({ data }), 5000);
+
     }
-
-
-
-
 
     render() {
-        console.log("fare", this.state.data);
+        console.log("api call", this.state.data);
         return (
 
             <div className="flex-right">
                 <ul>
-                <li><HashRouter><NavLink to="/" className="nav-link nav-block nav-color nav-align">Home</NavLink></HashRouter></li>
+                    <li><HashRouter><NavLink to="/" className="nav-link nav-block nav-color nav-align"><FontAwesomeIcon icon={faHome} /> Home</NavLink></HashRouter></li>
                 </ul>
-                <div className="News"><h3>News</h3>
+                <div className="News"><h3><FontAwesomeIcon icon={faNewspaper} /> News</h3>
 
                     <div>
                         {
@@ -41,6 +43,7 @@ class Nav extends Component {
                                         <div className="news_t">
                                             <h4>Title:</h4> <h5>{d.title}</h5>
                                         </div>
+
                                     )
                                 })
                                 : null
