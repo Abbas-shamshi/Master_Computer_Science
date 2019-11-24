@@ -9,7 +9,6 @@ h1, h2, p, ul, li {
 .react-logo {
     width: 400px;
 }
-
 .card {
     margin-top: 10px;
     padding: 15px;
@@ -31,6 +30,7 @@ header img {
     height: 340px;
 }
 .News {
+    padding-top: 1px;
     background-color: #425159;
     border-radius: 10px;
 }
@@ -46,7 +46,7 @@ header img {
 
 .news_t {
     width: 300px;
-    padding: 6px;
+    padding: 1px 5px;
 }
 
 .news_t:nth-child(odd) {

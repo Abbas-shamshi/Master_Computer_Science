@@ -1,12 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router";
-
-import r_logo from "./media/logo.svg"
-
-import {
-    NavLink,
-    HashRouter
-} from "react-router-dom";
+import {HashRouter} from "react-router-dom";
 import B_react from "./b_react";
 import B_node from "./B_node";
 import B_angular from "./B_angular";
