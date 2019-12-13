@@ -34,10 +34,7 @@ Run command with port and environment variables
 #### MYSQL Container
 
 ```bash
-docker run  -d \
---publish 3306:3306 \
---volume=/Users/SensehacK/Documents/GitHub/nodejs/mysql/data:/var/lib/mysql \
---name=sensehack-mysql-img kautilyasave/sensehack-mysql
+docker run  -d -p 3306:3306 --name=mysql-img image/mysql
 ```
 
 Save the MYSQL Image container local ip address and port for linking it to NodeJS Image while running.
@@ -52,14 +49,7 @@ MYSQL_HOST= 'Replace the IP address for giving the node js connection SQL Host a
 // Run command
 
 ```bash
-docker run  -d \
---publish 3000:3000 \
--e MYSQL_USER='root' \
--e MYSQL_PASSWORD='kautilya' \
--e MYSQL_DATABASE='node_js' \
--e MYSQL_HOST='172.17.0.2' \
---link sensehack-mysql-img:db \
---name=sensehack-nodejs-img kautilyasave/sensehack-nodejs
+docker run  -d -p 3000:3000 -e MYSQL_USER='root' -e MYSQL_PASSWORD='kautilya'  -e MYSQL_DATABASE='node_js' -e MYSQL_HOST='172.17.0.2' --link mysql-img:db --name=nodejs-img image/nodejs
 ```
 
 ## Docker Images Creation and Publish
