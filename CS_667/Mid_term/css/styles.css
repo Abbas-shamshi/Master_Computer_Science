@@ -178,12 +178,13 @@
     }
     table th{
         background-color: #415164;
+        color: white;
     }
     table{
         background-color: #7d97a5;
     }
 
-    table.table-ui tr:nth-child(even) td {
+    tr:nth-child(even) td {
         border-width: 1px;
-        background-color: #7d97a5;
+        background-color: #556b86;
     }
