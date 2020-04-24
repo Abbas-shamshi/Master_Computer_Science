@@ -15,6 +15,9 @@ for installing all the node modules and dependencies
  paste your generated api key in nav.js file in apikey variable
 
 ### `npm start`
+
+
+
 Runs the app in the development mode.<br />
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
