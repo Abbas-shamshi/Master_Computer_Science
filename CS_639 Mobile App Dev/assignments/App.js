@@ -39,6 +39,14 @@ import SnapchatV2 from './components/unit_2/snapchatv2'
 import GoogleV2 from './components/unit_2/googlev2'
 import Feedback from './components/unit_2/feedback'
 import Venmov2 from './components/unit_2/venmov2';
+import SnapchatV3 from './components/unit_3/snapchatv3';
+import GoogleV3 from './components/unit_3/googlev3';
+import Mobile_Resume from './components/unit_3/mobile_resume';
+import Music_Player from './components/unit_3/music_player';
+import Flag from './components/unit_3/flag';
+import SnapchatV4 from './components/unit_3/snapchatv4';
+import RainbowV2 from './components/unit_3/rainbowv2';
+import Flag2 from './components/unit_3/flag2';
 
 
 
@@ -66,9 +74,16 @@ const App: () => React$Node = () => {
       {/* <NewsV2/> */}
       {/* <SnapchatV2 /> */}
       {/* <GoogleV2/> */}
-{/* <Feedback/> */}
-<Venmov2/>
-
+      {/* <Feedback/> */}
+      {/* <Venmov2/> */}
+      {/* <SnapchatV3 /> */}
+      {/* <GoogleV3 /> */}
+      {/* <Mobile_Resume/> */}
+      {/* <Music_Player /> */}
+      {/* <Flag /> */}
+{/* <SnapchatV4/> */}
+{/* <RainbowV2/> */}
+<Flag2/>
     </View>
 
   );
