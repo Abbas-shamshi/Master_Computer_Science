@@ -40,7 +40,7 @@ import Venmo from './components/unit_1/venmo'
 
 
 
-
+import ScoreKeeper from './components/score_keeper_app/scorekeeper'
 
 
 
@@ -57,7 +57,8 @@ const App: () => React$Node = () => {
             {/* <News/> */}
             {/* <Google/> */}
             {/* <Snapchat/> */}
-            < Venmo/>
+            {/* < Venmo/> */}
+            <ScoreKeeper/>
           </View>
       
   );
