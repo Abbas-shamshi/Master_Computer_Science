@@ -1,123 +1,129 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, View, StyleSheet, TextInput, TouchableHighlight } from 'react-native';
+import { AppRegistry, Text, View, StyleSheet, TextInput, TouchableHighlight, ImageBackground, Dimensions } from 'react-native';
+
+
+let deviceHeight = Dimensions.get('window').height;
+let deviceWidth = Dimensions.get('window').width;
+
 
 export class ScoreKeeper extends Component {
-   constructor(props) {
-    super(props);
-    this.teamAadd3 = this.teamAadd3.bind(this);
-    this.teamAadd5 = this.teamAadd5.bind(this);
-    this.teamBadd3 = this.teamBadd3.bind(this);
-    this.teamBadd5 = this.teamBadd5.bind(this);
-  }
+    
     state = {
         teamA: 'KC',
         teamB: 'RC',
-        scoreA:'10',
-        scoreB:'4',
+        scoreA: '10',
+        scoreB: '4',
         inputValue: 'You can change me!',
-        result:''
+        result: ''
     };
 
 
-   
-teamAadd3(){
-    this.setState({scoreA: parseInt(this.state.scoreA) + 4 })
-}
-teamAadd5(){
-    this.setState({scoreA: parseInt(this.state.scoreA) + 6 })
-}
-teamBadd3(){
-    this.setState({scoreB: parseInt(this.state.scoreB) + 4 })
-}
-teamBadd5(){
-    this.setState({scoreB: parseInt(this.state.scoreB) + 6 })
-}
+
+    teamAadd3 = () => {
+        this.setState({
+            scoreA: parseInt(this.state.scoreA) + 4
+        })
+        console.log(this.state.scoreA);
+    };
+    teamAadd5 = () => {
+        this.setState({ scoreA: parseInt(this.state.scoreA) + 6 })
+    };
+    teamBadd3 = () => {
+        this.setState({ scoreB: parseInt(this.state.scoreB) + 4 })
+    };
+    teamBadd5 = () => {
+        this.setState({ scoreB: parseInt(this.state.scoreB) + 6 })
+    };
 
     render() {
         return (
             <View style={styles.container}>
-                
-            
-                <View style={styles.buttonContainer}>
-                
-                    
-                    <View style={styles.button}>
-                    
-                        <TouchableHighlight
-                            onClick={this.teamAadd5}
-                        >
-                        <Text style={styles.buttonText}>
-                            {this.state.teamA} Add 6
+
+
+                <ImageBackground
+                    style={styles.background}
+                    source={{ uri: 'https://codehs.com/uploads/72a2c2eae552297d44677b25a7e4cb87' }}
+                >
+                    <View style={styles.buttonContainer}>
+
+
+                        <View style={styles.button}>
+
+                            <TouchableHighlight
+                                onClick={this.teamAadd5}
+                            >
+                                <Text style={styles.buttonText}>
+                                    {this.state.teamA} Add 6
                         </Text>
-                        </TouchableHighlight>
-                        
-                    </View>
-                    <View style={styles.button}>
-                    
-                        <TouchableHighlight
-                            onClick={this.teamAadd3}
-                        >
-                        <Text style={styles.buttonText}>
-                            {this.state.teamA} Add 4
+                            </TouchableHighlight>
+
+                        </View>
+                        <View style={styles.button}>
+
+                            <TouchableHighlight
+                                onClick={this.teamAadd3}
+                            >
+                                <Text style={styles.buttonText}>
+                                    {this.state.teamA} Add 4
                         </Text>
-                        </TouchableHighlight>
-                        
+                            </TouchableHighlight>
+
+                        </View>
                     </View>
-                </View>
-                
-                <View style={styles.buttonContainer}>
-                    <View style={styles.button}>
-                        <TouchableHighlight
-                            onClick={this.teamBadd5}
-                        >
-                        <Text style={styles.buttonText}>
-                            {this.state.teamB} Add 6
+
+                    <View style={styles.buttonContainer}>
+                        <View style={styles.button}>
+                            <TouchableHighlight
+                                onClick={this.teamBadd5}
+                            >
+                                <Text style={styles.buttonText}>
+                                    {this.state.teamB} Add 6
                         </Text>
-                        </TouchableHighlight>
-                    </View>
-                    <View style={styles.button}>
-                        <TouchableHighlight
-                            onClick={this.teamBadd3}
-                        >
-                        <Text style={styles.buttonText}>
-                            {this.state.teamB} Add 4
+                            </TouchableHighlight>
+                        </View>
+                        <View style={styles.button}>
+                            <TouchableHighlight
+                                onClick={this.teamBadd3}
+                            >
+                                <Text style={styles.buttonText}>
+                                    {this.state.teamB} Add 4
                         </Text>
-                        </TouchableHighlight>
+                            </TouchableHighlight>
+                        </View>
                     </View>
-                </View>
-                <View style={styles.buttonContainerScore}>
-                    <TextInput style={styles.inputTeam}
-                        value={this.state.teamA}
-                        onChangeText={(teamA)=>this.setState({teamA})}
-                        
-                    />
-                    
-                    <Text style={styles.score}>
-                    {this.state.scoreA}
-                    </Text>
-                </View>
-                <View style={styles.buttonContainerScore}>
-                    
-                    <TextInput style={styles.inputTeam}
-                        value={this.state.teamB}
-                        onChangeText={(teamB)=>this.setState({teamB})}
-                    />
-                    <Text style={styles.score}>
-                    {this.state.scoreB}
-                    </Text>
-                </View>
-                
+                    <View style={styles.buttonContainerScore}>
+                        <TextInput style={styles.inputTeam}
+                            value={this.state.teamA}
+                            onChangeText={(teamA) => this.setState({ teamA })}
+
+                        />
+
+                        <Text style={styles.score}>
+                            {this.state.scoreA}
+                        </Text>
+                    </View>
+                    <View style={styles.buttonContainerScore}>
+
+                        <TextInput style={styles.inputTeam}
+                            value={this.state.teamB}
+                            onChangeText={(teamB) => this.setState({ teamB })}
+                        />
+                        <Text style={styles.score}>
+                            {this.state.scoreB}
+                        </Text>
+                    </View>
+                </ImageBackground>
+
+
             </View>
-      );
-   }
+        );
+    }
 }
 
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center',
-        backgroundColor: 'green',
+
     },
     title: {
         color: 'black',
@@ -134,13 +140,13 @@ const styles = StyleSheet.create({
     },
     buttonContainer: {
         flexDirection: 'row',
-    
-        alignItems:'center'
+
+        alignItems: 'center'
     },
     button: {
-        height: 50,
-        width: 90,
-        
+        height: deviceHeight / 8,
+        width: deviceWidth / 2.5,
+
         borderColor: 'black',
         borderWidth: 2,
         alignItems: 'center',
@@ -149,25 +155,36 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         color: 'black',
-        fontSize: 12,
+        fontSize: deviceHeight / 26,
         textAlign: 'center',
-        fontWeight:'bold'
+        fontWeight: 'bold'
     },
-    inputTeam:{
-        borderWidth:1,
-        height:40,
-        width:140,
+    inputTeam: {
+        borderWidth: 1,
+        height: 40,
+        width: 140,
+        fontSize: deviceHeight / 24,
+        fontWeight: 'bold',
 
-        
+
     },
-    buttonContainerScore:{
+    buttonContainerScore: {
         flexDirection: 'row',
-    
-        alignItems:'center',
-        marginTop:20,
+
+        alignItems: 'center',
+        marginTop: 20,
     },
-    score:{
-        marginLeft:10,
+    score: {
+        marginLeft: 10,
+        fontSize: deviceHeight / 24,
+        color: 'white',
+    },
+    background: {
+        width: deviceWidth,
+        height: deviceHeight,
+        alignItems: 'center',
+        justifyContent: 'center',
+
     }
 });
 
