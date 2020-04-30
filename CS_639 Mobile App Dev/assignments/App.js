@@ -47,9 +47,12 @@ import Flag from './components/unit_3/flag';
 import SnapchatV4 from './components/unit_3/snapchatv4';
 import RainbowV2 from './components/unit_3/rainbowv2';
 import Flag2 from './components/unit_3/flag2';
-import SnapchatV5 from './components/unit_4/snapchatv5';
+import SnapqchatV5 from './components/unit_4/snapchatv5';
 import Counter from './components/unit_4/counter';
 import Spell_Checker from './components/unit_4/spell_checker';
+import Navbar from './components/unit_5/navbar';
+import Biography from './components/unit_5/biography';
+import RSVP from './components/unit_5/rsvp';
 
 
 
@@ -89,10 +92,10 @@ const App: () => React$Node = () => {
       {/* <Flag2 /> */}
       {/* <SnapchatV5/> */}
       {/* <Counter /> */}
-<Spell_Checker/>
-
-
-
+      {/* <Spell_Checker/> */}
+      {/* <Navbar /> */}
+{/* <Biography/> */}
+<RSVP/>
 
 
 
