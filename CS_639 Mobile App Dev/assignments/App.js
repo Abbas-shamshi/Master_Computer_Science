@@ -53,6 +53,9 @@ import Spell_Checker from './components/unit_4/spell_checker';
 import Navbar from './components/unit_5/navbar';
 import Biography from './components/unit_5/biography';
 import RSVP from './components/unit_5/rsvp';
+import Saving_Tracker from './components/unit_6/saving_tracker';
+import VenmoV3 from './components/unit_6/venmov3';
+import Trivia from './components/unit_6/trivia';
 
 
 
@@ -94,12 +97,11 @@ const App: () => React$Node = () => {
       {/* <Counter /> */}
       {/* <Spell_Checker/> */}
       {/* <Navbar /> */}
-{/* <Biography/> */}
-<RSVP/>
-
-
-
-
+      {/* <Biography/> */}
+      {/* <RSVP/> */}
+      {/* <Saving_Tracker/> */}
+      {/* <VenmoV3/> */}
+      <Trivia />
     </View>
 
   );
