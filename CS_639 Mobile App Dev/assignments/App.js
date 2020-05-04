@@ -53,6 +53,8 @@ import Spell_Checker from './components/unit_4/spell_checker';
 import Navbar from './components/unit_5/navbar';
 import Biography from './components/unit_5/biography';
 import RSVP from './components/unit_5/rsvp';
+import RoadTrip from './components/unit_7/roadtrip';
+import DayTime from './components/unit_7/dayTime';
 
 
 
@@ -94,10 +96,10 @@ const App: () => React$Node = () => {
       {/* <Counter /> */}
       {/* <Spell_Checker/> */}
       {/* <Navbar /> */}
-{/* <Biography/> */}
-<RSVP/>
-
-
+      {/* <Biography/> */}
+      {/* <RSVP/> */}
+      {/* <RoadTrip/> */}
+      <DayTime />
 
 
     </View>
