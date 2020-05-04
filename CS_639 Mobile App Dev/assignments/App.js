@@ -55,6 +55,7 @@ import Biography from './components/unit_5/biography';
 import RSVP from './components/unit_5/rsvp';
 import RoadTrip from './components/unit_7/roadtrip';
 import DayTime from './components/unit_7/dayTime';
+import Scheduler from './components/unit_7/scheduler';
 
 
 
@@ -99,8 +100,8 @@ const App: () => React$Node = () => {
       {/* <Biography/> */}
       {/* <RSVP/> */}
       {/* <RoadTrip/> */}
-      <DayTime />
-
+      {/* <DayTime /> */}
+<Scheduler/>
 
     </View>
 
