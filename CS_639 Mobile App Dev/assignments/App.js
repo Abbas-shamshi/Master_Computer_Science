@@ -56,6 +56,7 @@ import RSVP from './components/unit_5/rsvp';
 import RoadTrip from './components/unit_7/roadtrip';
 import DayTime from './components/unit_7/dayTime';
 import Scheduler from './components/unit_7/scheduler';
+import FavMoviesV2 from './components/unit_7/favMovie';
 
 
 
@@ -101,7 +102,14 @@ const App: () => React$Node = () => {
       {/* <RSVP/> */}
       {/* <RoadTrip/> */}
       {/* <DayTime /> */}
-<Scheduler/>
+      {/* <Scheduler/> */}
+<FavMoviesV2/>
+
+
+
+
+
+
 
     </View>
 
