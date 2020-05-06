@@ -60,6 +60,7 @@ import RoadTrip from './components/unit_7/roadtrip';
 import DayTime from './components/unit_7/dayTime';
 import Scheduler from './components/unit_7/scheduler';
 import FavMoviesV2 from './components/unit_7/favMovie';
+import Characters from './components/unit_8/charcters';
 
 const App: () => React$Node = () => {
   return (
@@ -102,7 +103,11 @@ const App: () => React$Node = () => {
       {/* <RoadTrip/> */}
       {/* <DayTime /> */}
       {/* <Scheduler/> */}
-      <FavMoviesV2/>
+      {/* <FavMoviesV2/> */}
+    <Characters/>
+
+
+
     </View>
 
   );
