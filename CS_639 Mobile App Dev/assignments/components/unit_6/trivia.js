@@ -101,9 +101,15 @@ export class Trivia extends Component {
         }
 
     }
+    // .then(res => {
+    //     console.log("res data", res);
+    // })
     render() {
+        const { container,buttonContainer} = styles;
+        // console.log("res data");
+
         return (
-            <View style={styles.container}>
+            <View style={container}>
 
                 <ImageBackground
                     style={styles.backgroundImage}
@@ -111,7 +117,7 @@ export class Trivia extends Component {
                 >
                 
                 
-                <View style={styles.buttonContainer}>
+                <View style={buttonContainer}>
                 
                     <TouchableHighlight
                         onPress={() => {this.navigator('info')}}
