@@ -60,7 +60,7 @@ export class Scheduler extends Component {
             ]
         };
     }
-
+    
 
     componentDidMount() {
         var month = new Date().getMonth() + 1;
@@ -73,12 +73,17 @@ export class Scheduler extends Component {
 
     }
 
-
+    changeColor = () => {
+        random
+    }
 
 
     render() {
+        const a='b';
         return (
             <View style={styles.container}>
+                <View style={{backgroundColor: this.state.current}} onPress={this.changeColor}/>
+                
                 <View style={styles.headerContainer}>
                     <Text style={styles.headerText}>
                         {this.state.date}
