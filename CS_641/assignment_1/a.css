@@ -1,0 +1,14 @@
+img{
+    width: 200px;
+    /* background-color: seagreen; */
+}
+.abc{
+    background-color: green;
+}
+#img-box{
+    width: 200px;
+
+    box-shadow: 10px 5px 5px blue;
+    padding: 50px;
+    margin: 50px 0;
+}

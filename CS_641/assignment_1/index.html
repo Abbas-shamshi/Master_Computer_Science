@@ -1,0 +1,104 @@
+<html>
+<!-- ------------- Start Head Structure -------------- -->
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" />
+    <title>Assignment 1</title>
+
+    <!-- Linking my external CSS and JS -->
+    <link id="cssAddr" rel="stylesheet" href="index.css" type="text/css" />
+    <script src="main.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;1,100;1,300&display=swap" rel="stylesheet">
+</head>
+<!-- ------------- End Head Structure -------------- -->
+
+<!-- ------------- Body Structure -------------- -->
+
+<body id="abc">
+
+
+    <section id="header" class="themeHeader">
+        <div class="radioButton">
+            <input type="radio" id="Light" name="theme" value="Light" checked onchange="darkMode()">
+            <label for="Light">Light</label>
+        </div>
+        <div class="radioButton radioButtonDark">
+            <input type="radio" id="Dark" name="theme" value="Dark" onchange="darkMode()">
+            <label for="Dark">Dark</label>
+        </div>
+
+
+
+
+    </section>
+    <section>
+        <div class="headerTextContainer">
+            <h1 id="headertext" class="headerText">Which one is Faster?</h1>
+
+        </div>
+
+    </section>
+    <section id="browserContent" class="browserContainer">
+        <div class="card" onclick="rotateImage('firefox')">
+            <img id="firefox"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/1200px-Firefox_logo%2C_2019.svg.png">
+            <div class="textContainer">
+                <h4><b>Firefox</b></h4>
+                <p>Firefox Browser is one of the fastest browser</p>
+                <p>Click to comapre</p>
+
+            </div>
+        </div>
+        <div class="card" onclick="rotateImage('chrome')">
+            <img id="chrome"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Chrome_icon_%28September_2014%29.svg/1200px-Google_Chrome_icon_%28September_2014%29.svg.png">
+            <div class="textContainer">
+                <h4><b>Chrome</b></h4>
+                <p>Chrome Browser is fast but consume more ram</p>
+                <p>Click to comapre</p>
+
+            </div>
+        </div>
+        <div class="card" onclick="rotateImage('edge')">
+            <img id="edge" src="https://www.iconninja.com/files/456/900/977/browser-internet-explorer-icon.svg">
+            <div class="textContainer">
+                <div>
+                    <h4><b>Edge</b></h4>
+                    <p>Edge Browser you know the speed ;p</p>
+                    <p>Click to comapre</p>
+
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+    <section id="videoContent" class="videoContainer">
+        <video controls autoplay>
+            <source src="media/browser.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+    </section>
+
+    <div class="buttonContainer">
+        <button id="button" class="button" onclick="displayVideo()">Fastest Browser</button>
+
+    </div>
+
+    <!-- <div id="img-box">
+        <img id="image"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/1200px-Firefox_logo%2C_2019.svg.png">
+    </div>
+
+
+    <div id="a"></div>
+ -->
+    <div id="print"></div>
+
+</body>
+
+<!-- ------------- End Body Structure -------------- -->
+
+</html>
