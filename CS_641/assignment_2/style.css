@@ -1,0 +1,202 @@
+img{
+    width: 100%;
+}
+.card {
+    display: block;
+    flex-direction: column;
+    align-items: center ;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    background-color: #e4d6d6;
+    border-radius: 20px;
+    margin: 0 20px;
+  }
+  .card:hover {
+    box-shadow: 0 16px 8px 8px rgba(245, 211, 117, 0.671);
+    background-color: rgba(221, 203, 154, 0.562);
+
+  }
+  .itemContainer{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, [col-start] 1fr);
+    grid-gap: 20px;
+    grid-area: itemContainer;
+    justify-items: center;
+
+
+  }
+  .textContainer {
+    width: 100%;
+  }
+  .textContainer h4,p{
+    padding-left:  20px;
+
+  }
+  .headerContainer{
+      text-align: center;
+      grid-area: headerContainer;
+  }
+  .footer{
+    grid-area: footer;
+    text-align: center;
+    margin: 10px;
+
+  }
+  .container{
+      display: grid;
+      grid-gap: 10px;
+      grid-template-areas: 
+      "headerContainer"
+      "itemContainer"
+      "footer"
+      ;
+  }
+  .button {
+    background: rgb(131,58,180);
+    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+  }
+  .buttonContainer{
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+      margin: 50px 0 30px 0;
+  }
+  .title{
+    background: -webkit-linear-gradient( rgba(131,58,180,1)  20%, rgba(252,176,69,1) 100%);
+    -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+  }
+  .imgContainer {
+    background-color: transparent;
+    height: 380px;
+    perspective: 1000px;
+  }
+  .imgContainerBox {
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .imgContainer:hover .imgContainerBox {
+    transform: rotateY(180deg);
+  }
+  .imgContainerFront, .imgContainerBack {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .imgContainerBack {
+    transform: rotateY(180deg);
+
+  }
+   @media only screen and (min-width: 500px) {
+    .itemContainer{
+    grid-gap: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+
+
+    }
+    .card{
+      width: 90%;
+    }
+    .imgContainer {
+      background-color: transparent;
+      height: 340px;
+      perspective: 1000px;
+    }
+    .imgContainerBox {
+      position: relative;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .imgContainer:hover .imgContainerBox {
+      transform: rotateY(180deg);
+    }
+    .imgContainerFront, .imgContainerBack {
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    .imgContainerBack {
+      transform: rotateY(180deg);
+
+    }
+  }
+  @media only screen and (min-width: 768px) {
+    .itemContainer{
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+
+
+    }
+    .imgContainer {
+      background-color: transparent;
+      height: 340px;
+      perspective: 1000px;
+    }
+    .imgContainerBox {
+      position: relative;
+      text-align: center;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .imgContainer:hover .imgContainerBox {
+      transform: rotateY(180deg);
+    }
+    .imgContainerFront, .imgContainerBack {
+      position: absolute;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+    }
+    .imgContainerBack {
+      transform: rotateY(180deg);
+
+    }
+    .card{
+      width: 80%;
+
+    }
+  } 
+  @media only screen and (min-width: 1200px) {
+    .itemContainer{
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+  } 
+  .imgContainer {
+    background-color: transparent;
+    height: 340px;
+    perspective: 1000px;
+  }
+  .imgContainerBox {
+    position: relative;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  .imgContainer:hover .imgContainerBox {
+    transform: rotateY(180deg);
+  }
+  .imgContainerFront, .imgContainerBack {
+    position: absolute;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  .imgContainerBack {
+    transform: rotateY(180deg);
+
+  }
+}
