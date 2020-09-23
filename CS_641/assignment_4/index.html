@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My first three.js app</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <script src="js/three.js"></script>
+    <script>
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+        var material = new THREE.MeshBasicMaterial({ color: 0xffff00 });
+
+
+        // ===============Add Cube==========
+        var geometryBox = new THREE.BoxGeometry();
+        var cube = new THREE.Mesh(geometryBox, material);
+
+        // ===============Add Cube==========
+
+        var points = [];
+        points.push(new THREE.Vector3(- 10, 0, 0));
+        points.push(new THREE.Vector3(0, 10, 0));
+        points.push(new THREE.Vector3(10, 0, 0));
+        points.push(new THREE.Vector3(0, 0, -10));
+        var geometryLine = new THREE.BufferGeometry().setFromPoints(points);
+        var line = new THREE.Line(geometryLine, material);
+
+
+        // ==================Add Sphere==============
+        var geometrySphere = new THREE.SphereGeometry(5, 3, 32);
+        var sphere = new THREE.Mesh(geometrySphere, material);
+
+
+
+
+        // ====================Add Ring==============
+
+        var geometryRing = new THREE.RingGeometry(1, 5, 32);
+        var materialRing = new THREE.MeshBasicMaterial({ color: 0x00FF00, side: THREE.DoubleSide });
+        var Ring = new THREE.Mesh(geometryRing, materialRing);
+
+
+        // ==============ADD Cylinder=============
+        var geometryCylinder = new THREE.CylinderBufferGeometry(3, 3, 12, 10);
+        var materialCylinder = new THREE.MeshBasicMaterial({ color: 0x00FF00 });
+        var cylinder = new THREE.Mesh(geometryCylinder, materialCylinder);
+
+
+        scene.add(line);
+        scene.add(cube);
+        scene.add(sphere);
+        scene.add(Ring);
+        scene.add(cylinder);
+
+
+        line.position.set(-18, 4, 0);
+        sphere.position.set(20, 8, 0);
+        Ring.position.set(0, 8, 0);
+        cylinder.position.set(0, -8, 0);
+
+
+
+        function animate() {
+            requestAnimationFrame(animate);
+            cube.rotation.x += 0.01;
+            cube.rotation.y += 0.01;
+            line.rotation.x += 0.01;
+            line.rotation.y += 0.01;
+            sphere.rotation.x += 0.01;
+            sphere.rotation.y += 0.01;
+            Ring.rotation.x += 0.02;
+            Ring.rotation.y += 0.01;
+            cylinder.rotation.x += 0.01;
+            cylinder.rotation.z += 0.02;
+
+
+
+            renderer.render(scene, camera);
+        }
+        animate();
+        camera.position.z = 20;
+
+    </script>
+    <style>
+        #info {
+            position: absolute;
+            top: 10px;
+            width: 100%;
+            text-align: center;
+            z-index: 10;
+            display: block;
+            color: wheat;
+        }
+    </style>
+    <div id="info">Assignemnt 4</div>
+</body>
+
+</html>
