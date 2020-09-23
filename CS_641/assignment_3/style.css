@@ -1,0 +1,247 @@
+html {
+    scroll-behavior: smooth;
+  }
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+.navContainer{
+    grid-area: navContainer;
+
+}
+.logoContainer{
+    grid-area: logoContainer;
+
+}
+.name{
+    grid-area: name;
+
+}
+.role{
+    grid-area: role;
+
+}
+.linkConatiner{
+    grid-area: linkConatiner;
+
+}
+.links{
+    grid-area: links;
+
+}
+.Container{
+    grid-area: Container;
+
+}
+.mainContainer{
+    grid-area: mainContainer;
+
+}
+.mainText{
+    grid-area: mainText;
+}
+.buttonContainer{
+    grid-area: buttonContainer;
+
+}
+.button{
+    grid-area: button;
+
+}
+.ProjectConatainer{
+    grid-area: ProjectConatainer;
+
+}
+.projectTitle{
+    grid-area: projectTitle;
+
+}
+.project{
+    grid-area: project;
+
+}
+.contactContainer{
+    grid-area: contactContainer;
+
+}
+.contactDetail{
+    grid-area: contactDetail;
+
+}
+.Container{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "navContainer navContainer"
+    "mainContainer mainContainer"
+    "ProjectConatainer ProjectConatainer"
+    "contactContainer contactContainer"
+    
+    
+    ;
+}
+.navContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "logoContainer  linkConatiner";
+    justify-content: center;
+    align-items: center;
+    background-color: cornflowerblue;
+    padding: 10px;
+    color: #013594;
+}
+.links{
+    display: flex;
+    list-style-type: none;
+    justify-content: space-evenly;
+
+}
+.logoContainer{
+    margin-left: 10px;
+
+}
+.links>li:hover{
+    color: #0e0084;
+}
+.mainContainer{
+    height: 400px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-evenly;
+}
+.mainText{
+   text-align: center;
+   font-size: 1.950em;
+}
+.buttonContainer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+}
+.button {
+    background: rgb(131,58,180);
+    background: linear-gradient(315deg, #7f5a83 0%, #0d324d 74%);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 12px;
+    margin: 0 40px;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 400px;
+    height: 100%;
+  }
+  
+  .card:hover {
+    box-shadow: 0 16px 8px 8px rgba(245, 211, 117, 0.671);
+    background-color: rgba(221, 203, 154, 0.562);
+
+  }
+  .textContainer {
+    width: 100%;
+  }
+  .textContainer h4,p{
+    padding-left:  20px;
+
+  }
+  .project{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+  }
+  .detailsContainer{
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      height: 200px;
+
+  }
+  .contactDetail{
+      width: 120px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: wheat;
+      padding: 20px;
+      border-radius: 10px;
+  }
+ .projectImage{
+     width: 100%;
+ }
+ .projectTitle{
+     font-size:1.7em;
+     text-align: center;
+ }
+ .ProjectConatainer{
+     margin-bottom: 40px;
+ }
+ ion-icon{
+     margin:0 5px;
+ }
+ a{
+     text-decoration: none;
+ }
+ .phoneText{
+    display: none;
+}
+
+
+ @media only screen and (max-width: 500px) {
+.linkConatiner{
+    display: none;
+}
+.navContainer{
+    grid-template-columns: 1fr ;
+    grid-template-areas: 
+      "logoContainer ";
+}
+.mainText{
+    display: none;
+}
+.phoneText{
+    display: grid;
+    text-align: center;
+    font-size: 1.500000em;
+}
+.buttonContainer{
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto, 1fr);
+}
+.button {
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 1em;
+    width: 8em;
+    font-size: 1.2em;
+  }
+  .project{
+      display: grid;
+      justify-content: center;
+      align-items: center;
+  }
+  .card{
+      padding: 20px 10px;
+      width: 95%;
+  }
+  .detailsContainer{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 400px;
+  }
+ }
