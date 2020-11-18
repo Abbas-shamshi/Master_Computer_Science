@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Tab 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title >Tab 1</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <!-- List of Text Items -->
+  <ion-list>
+      <ion-card>
+        <ion-card-header>
+
+          <ion-card-title>Firefox</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          <ion-img
+            [src]='"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Firefox_logo%2C_2019.svg/1200px-Firefox_logo%2C_2019.svg.png"'>
+          </ion-img>
+          Firefox Browser is one of the fastest browser
+        </ion-card-content>
+        <ion-button color="secondary" (click)="sendData('Firefox')">Browser</ion-button>
+      </ion-card>
+      <ion-card>
+        <ion-card-header>
+          
+          <ion-card-title>Chrome</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          <ion-img [src]='"https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Google_Chrome_icon_%28September_2014%29.svg/1200px-Google_Chrome_icon_%28September_2014%29.svg.png"'></ion-img>
+          Chrome Browser is fast but consume more ram
+        </ion-card-content>
+        <ion-button color="secondary" (click)="sendData('Chrome')">Browser</ion-button>
+      </ion-card>
+      <ion-card >
+        <ion-card-header>
+          
+          <ion-card-title>Edge</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content >
+          <ion-img [src]='"https://www.iconninja.com/files/456/900/977/browser-internet-explorer-icon.svg"'></ion-img>
+          Edge Browser we all know
+        </ion-card-content>
+        <ion-button color="secondary" (click)="sendData('Edge')">Browser</ion-button>
+      </ion-card>
+      
+      
+        <ion-button expand="full"  color="secondary" href="/browser">Browser Page</ion-button>
+        <ion-button expand="block" color="success" [routerLink]="['/browser']">Browser Page</ion-button>
+        <ion-button expand="full" color="primary" (click)='navigateUrl()'>Browser Page</ion-button>
+
+    
+
+  </ion-list>
+
+
+  </ion-content>
