@@ -1,0 +1,43 @@
+<ion-header>
+
+
+  <ion-toolbar color="success">
+    <ion-buttons slot="end">
+      <ion-button color="secondary" fill="outline" (click)="dismiss()">
+        Close
+      </ion-button>
+    </ion-buttons>
+
+    <ion-title>Modal</ion-title>
+  </ion-toolbar>
+
+
+</ion-header>
+
+<ion-content>
+  <ion-label color="dark" class="ion-text-center">
+    <h1>{{display}}</h1>
+  </ion-label>
+
+
+
+
+  <ion-list class="item item-trns ">
+
+
+    <ion-item color="none" lines="none">
+      <ion-range min="-200" max="200" color="danger" pin="true" step="50" snaps="true" ticks="false"
+        [(ngModel)]="rangeValue" (ionChange)="rangeChange()">
+        <ion-icon size="small" slot="start" name="resize-outline"></ion-icon>
+        <ion-icon slot="end" name="expand-outline"></ion-icon>
+      </ion-range>
+    </ion-item>
+
+
+  </ion-list>
+  <button class="ion-activatable ripple-parent">
+    Close
+    <ion-ripple-effect type="unbounded"></ion-ripple-effect>
+  </button>
+
+</ion-content>

@@ -1,0 +1,17 @@
+.modal-bck {
+    --background: #222;
+  }
+  .loading {
+    --background: #222;
+    --spinner-color: #fff;
+  
+    color: #fff;
+  }
+  ion-content {
+    --background: url(https://i.pinimg.com/originals/f5/af/38/f5af38611cd1bda1f68876a13bb6436e.jpg) no-repeat center/cover fixed;
+  }
+  .item.item-trns {
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
+    color: white; 
+  }

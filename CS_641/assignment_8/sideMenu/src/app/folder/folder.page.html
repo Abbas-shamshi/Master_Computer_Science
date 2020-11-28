@@ -1,0 +1,45 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Page</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-list>
+    <ion-list-header lines="inset" class="ion-no-padding">
+      <ion-label class="ion-text-center" color="success">
+        <h1>Name</h1>
+      </ion-label>
+    </ion-list-header>
+    <ion-item>
+      <ion-label color="secondary" position="floating">Your Name</ion-label>
+      <ion-input type="text" [(ngModel)]="name"></ion-input>
+    </ion-item>
+    <ion-button color="tertiary" class="ion-margin-top" expand="block" (click)="presentModal()">Submit</ion-button>
+
+  </ion-list>
+
+  <ion-card class="ion-margin-top" (click)="presentActionSheet()">
+    <ion-card-header>
+
+      <ion-card-title>NYC</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-img [src]='"https://media.tacdn.com/media/attractions-splice-spp-674x446/06/73/10/c0.jpg"'>
+      </ion-img>
+      <ion-label>
+        New York City Skyline
+      </ion-label>
+    </ion-card-content>
+    <ion-button class="ion-text-center gradient"  expand="block" class="gradient">Action</ion-button>
+  </ion-card>
+</ion-content>
