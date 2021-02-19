@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-button fill="outline" (click)="dismiss()">
+        Close
+      </ion-button>
+    </ion-buttons>
+    <ion-title>modal</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item>
+
+      <ion-label>CURRENCY , VALUE </ion-label>
+
+    </ion-item>
+   
+
+    <ion-item *ngFor="let curr of fetchedData">
+
+      <ion-label>{{curr}} </ion-label>
+
+    </ion-item>
+
+
+  </ion-list>
+
+</ion-content>
