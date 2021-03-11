@@ -1,0 +1,33 @@
+<ion-item>
+
+  <ion-row class="row">
+
+    <ion-header>
+      Speech Recognition
+    </ion-header>
+    
+    <ion-col>
+      <ion-button (click)='listen()'>
+        Listen
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      {{text}}
+    </ion-col>
+
+  </ion-row>
+</ion-item>
+<ion-row *ngFor="let log of logs">
+  <ion-item >
+    <ion-label>
+      {{log}}
+    </ion-label>
+  </ion-item>
+</ion-row>
+<ion-row>
+  <ion-item>
+    <ion-button (click)='clearLog()'>
+      Clear Log
+    </ion-button>
+  </ion-item>
+</ion-row>

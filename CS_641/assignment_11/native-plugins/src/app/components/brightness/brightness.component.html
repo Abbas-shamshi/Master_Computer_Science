@@ -1,0 +1,21 @@
+<ion-item>
+
+  <ion-row class="row">
+    <ion-item>
+      <ion-header>
+        Set Screen Brightness
+      </ion-header>
+    </ion-item>
+  </ion-row>
+</ion-item>
+
+<ion-range min="1" max="100" pin="true" [(ngModel)]="value" (ionChange)="setBrightness($event)">
+  <ion-icon size="small" slot="start" name="sunny"></ion-icon>
+  <ion-icon size="large" slot="end" name="sunny"></ion-icon>
+</ion-range>
+<ion-item>
+  {{value}}
+</ion-item>
+<ion-item>
+  {{display}}
+</ion-item>

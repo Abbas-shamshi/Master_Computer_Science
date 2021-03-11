@@ -1,0 +1,22 @@
+<ion-item>
+
+  <ion-row class="row">
+
+    <ion-header>
+      Scan barcode
+    </ion-header>
+    <ion-col>
+      <ion-button (click)='scanBarcode()'>
+        Scan
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      Scaned data: {{scannedData}}
+    </ion-col>
+
+
+  </ion-row>
+  <ion-row *ngFor="let data of scannedData">
+    {{data}}
+  </ion-row>
+</ion-item>
