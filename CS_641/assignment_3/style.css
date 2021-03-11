@@ -199,7 +199,7 @@ body{
 }
 
 
- @media only screen and (max-width: 500px) {
+ @media only screen and (max-width: 600px) {
 .linkConatiner{
     display: none;
 }
