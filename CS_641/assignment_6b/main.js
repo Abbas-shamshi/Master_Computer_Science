@@ -37,6 +37,8 @@ function drawLine(a, b, c, d, color) {
 }
 
 let isClicked = false;      //Setting on mouse click to false
+let isTouched = false;      //Setting on mouse click to false
+
 
 /* Event Listner to check mouse Click */
 document.addEventListener('mousedown', e => {
@@ -90,3 +92,32 @@ function drawMovingLine(startX, startY, mousePosX, curvPointY, endY, color) {
     // ctx.lineTo(c, d);
     ctx.stroke();
 }
+
+
+/* Event Listner To Check Touch Event */
+window.addEventListener("touchmove", e=>{
+    console.log("Inside touch Event")
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    var touchPosX = e.touches[0].pageX;
+    var touchPosY = e.touches[0].pageY;
+    console.log("Touch Cordinates X is "+touchPosX+" and Y is "+touchPosY)
+
+    for (var i = 0; i < this.colors.length; i = i + 1) {
+        // console.log(colors[i]);
+
+
+        // Drawing the Canvas based on mouse position by passing all the parameters
+        drawMovingLine(0, incr * i + 10, touchPosX, touchPosY, incr * i + 10, this.colors[i]);
+
+    }
+});
+
+ window.addEventListener("touchend", e=>{
+    for (var i = 0; i < colors.length; i = i + 1) {
+        // console.log(colors[i]);
+        // Drawing the Initial Canvas and passing all the parameters
+        drawLine(0, incr * i + 10, b, incr * i + 10, colors[i]);
+    
+    }
+
+ });
