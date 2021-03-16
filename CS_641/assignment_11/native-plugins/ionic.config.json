@@ -1,0 +1,7 @@
+{
+  "name": "native-plugins",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,22 @@
+<ion-item>
+
+  <ion-row class="row">
+
+    <ion-header>
+      Text to Speech
+    </ion-header>
+    <ion-col>
+      <ion-input type="text" [(ngModel)]="text"></ion-input>
+    </ion-col>
+    
+    <ion-col>
+      <ion-button (click)='speak()'>
+        Speak
+      </ion-button>
+    </ion-col>
+    <ion-col>
+      {{text}}
+    </ion-col>
+
+  </ion-row>
+</ion-item>
