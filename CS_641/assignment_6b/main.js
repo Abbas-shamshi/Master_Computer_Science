@@ -44,6 +44,18 @@ let isTouched = false;      //Setting on mouse click to false
 document.addEventListener('mousedown', e => {
 
     isClicked = true;       //Set is clicked to true when mouse button is clicked
+    console.log("Clicked")
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    var mousePosX = e.offsetX;
+    var mousePosY = e.offsetY;
+    for (var i = 0; i < this.colors.length; i = i + 1) {
+        // console.log(colors[i]);
+
+
+        // Drawing the Canvas based on mouse position by passing all the parameters
+        drawMovingLine(0, incr * i + 10, mousePosX, mousePosY, incr * i + 10, this.colors[i]);
+
+    }
 });
 
 
@@ -95,29 +107,48 @@ function drawMovingLine(startX, startY, mousePosX, curvPointY, endY, color) {
 
 
 /* Event Listner To Check Touch Event */
-window.addEventListener("touchmove", e=>{
+window.addEventListener("touchstart", e => {
     console.log("Inside touch Event")
     ctx.clearRect(0, 0, canvas.width, canvas.height);
-    var touchPosX = e.touches[0].pageX;
-    var touchPosY = e.touches[0].pageY;
-    console.log("Touch Cordinates X is "+touchPosX+" and Y is "+touchPosY)
+    var touchPosX = e.touches[0].pageX;     //touch x cordinates
+    var touchPosY = e.touches[0].pageY;     //toouch y cordinates
+    console.log("Touch Cordinates X is " + touchPosX + " and Y is " + touchPosY)
 
     for (var i = 0; i < this.colors.length; i = i + 1) {
         // console.log(colors[i]);
 
 
-        // Drawing the Canvas based on mouse position by passing all the parameters
+        // Drawing the Canvas based on touch position by passing all the parameters
+        drawMovingLine(0, incr * i + 10, touchPosX, touchPosY, incr * i + 10, this.colors[i]);
+
+    }
+});
+/* Event Listner To Check Touch Move Event */
+window.addEventListener("touchmove", e => {
+    console.log("Inside touch Event")
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    var touchPosX = e.touches[0].pageX;     //touch x cordinates
+    var touchPosY = e.touches[0].pageY;     //touch y cordinates
+    console.log("Touch Cordinates X is " + touchPosX + " and Y is " + touchPosY)
+
+    for (var i = 0; i < this.colors.length; i = i + 1) {
+        // console.log(colors[i]);
+
+
+        // Drawing the Canvas based on touch position by passing all the parameters
         drawMovingLine(0, incr * i + 10, touchPosX, touchPosY, incr * i + 10, this.colors[i]);
 
     }
 });
 
- window.addEventListener("touchend", e=>{
+
+/* Event Listner To Check Touch End Event */
+window.addEventListener("touchend", e => {
     for (var i = 0; i < colors.length; i = i + 1) {
         // console.log(colors[i]);
         // Drawing the Initial Canvas and passing all the parameters
         drawLine(0, incr * i + 10, b, incr * i + 10, colors[i]);
-    
+
     }
 
- });
+});
